@@ -23,8 +23,12 @@
         accessor: 'cropYield',
       }),
       table.column({
+        header: 'Preserve Yield',
+        accessor: 'preserveYield',
+      }),
+      table.column({
         header: 'Minutes',
-        accessor: 'Minutes',
+        accessor: 'minutes',
       }),
       table.column({
         header: 'Gain',
