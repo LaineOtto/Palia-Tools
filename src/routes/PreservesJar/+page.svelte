@@ -4,7 +4,7 @@
     import { addSortBy, addColumnOrder } from 'svelte-headless-table/plugins';
     import tableData from '$lib/data/preservesJar.js';
 
-    console.log(tableData);
+    // console.log(tableData);
   
     const data = readable(tableData);
   
@@ -12,13 +12,6 @@
         sort: addSortBy({}),
         colOrder: addColumnOrder(),
     });
-  
-    // "crop": "Star Potato",
-    //     "cropYield": "67",
-    //     "preserveYield": "102",
-    //     "minutes": "54",
-    //     "gain": "35",
-    //     "goldPerMinute": "0.65"
 
     const columns = table.createColumns([
       table.column({

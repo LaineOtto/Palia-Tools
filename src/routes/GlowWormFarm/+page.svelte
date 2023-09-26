@@ -4,7 +4,7 @@
     import { addSortBy, addColumnOrder } from 'svelte-headless-table/plugins';
     import tableData from '$lib/data/glowWormFarm.js';
 
-    console.log(tableData);
+    // console.log(tableData);
   
     const data = readable(tableData);
   
