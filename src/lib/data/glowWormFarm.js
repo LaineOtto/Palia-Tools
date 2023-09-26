@@ -1,156 +1,156 @@
 export default [
     {
         "crop": "Rice",
-        "cropYield": "27",
-        "farmYield": "50",
-        "gain": "23",
+        "cropSaleValue": "27",
+        "farmSaleValue": "50",
+        "netValue": "23",
         "goldPerMinute": "0.38"
     },
     {
         "crop": "Carrot",
-        "cropYield": "23",
-        "farmYield": "45",
-        "gain": "22",
+        "cropSaleValue": "23",
+        "farmSaleValue": "45",
+        "netValue": "22",
         "goldPerMinute": "0.37"
     },
     {
         "crop": "Tomato",
-        "cropYield": "23",
-        "farmYield": "45",
-        "gain": "22",
+        "cropSaleValue": "23",
+        "farmSaleValue": "45",
+        "netValue": "22",
         "goldPerMinute": "0.37"
     },
     {
         "crop": "Onion",
-        "cropYield": "30",
-        "farmYield": "50",
-        "gain": "20",
+        "cropSaleValue": "30",
+        "farmSaleValue": "50",
+        "netValue": "20",
         "goldPerMinute": "0.33"
     },
     {
         "crop": "Spicy Pepper",
-        "cropYield": "32",
-        "farmYield": "50",
-        "gain": "18",
+        "cropSaleValue": "32",
+        "farmSaleValue": "50",
+        "netValue": "18",
         "goldPerMinute": "0.30"
     },
     {
         "crop": "Wheat",
-        "cropYield": "33",
-        "farmYield": "50",
-        "gain": "17",
+        "cropSaleValue": "33",
+        "farmSaleValue": "50",
+        "netValue": "17",
         "goldPerMinute": "0.28"
     },
     {
         "crop": "Blueberry",
-        "cropYield": "39",
-        "farmYield": "55",
-        "gain": "16",
+        "cropSaleValue": "39",
+        "farmSaleValue": "55",
+        "netValue": "16",
         "goldPerMinute": "0.27"
     },
     {
         "crop": "Corn",
-        "cropYield": "40",
-        "farmYield": "55",
-        "gain": "15",
+        "cropSaleValue": "40",
+        "farmSaleValue": "55",
+        "netValue": "15",
         "goldPerMinute": "0.25"
     },
     {
         "crop": "Star Carrot",
-        "cropYield": "34",
-        "farmYield": "45",
-        "gain": "11",
+        "cropSaleValue": "34",
+        "farmSaleValue": "45",
+        "netValue": "11",
         "goldPerMinute": "0.18"
     },
     {
         "crop": "Star Tomato",
-        "cropYield": "34",
-        "farmYield": "45",
-        "gain": "11",
+        "cropSaleValue": "34",
+        "farmSaleValue": "45",
+        "netValue": "11",
         "goldPerMinute": "0.18"
     },
     {
         "crop": "Potato",
-        "cropYield": "45",
-        "farmYield": "55",
-        "gain": "10",
+        "cropSaleValue": "45",
+        "farmSaleValue": "55",
+        "netValue": "10",
         "goldPerMinute": "0.17"
     },
     {
         "crop": "Star Rice",
-        "cropYield": "40",
-        "farmYield": "50",
-        "gain": "10",
+        "cropSaleValue": "40",
+        "farmSaleValue": "50",
+        "netValue": "10",
         "goldPerMinute": "0.17"
     },
     {
         "crop": "Star Onion",
-        "cropYield": "45",
-        "farmYield": "50",
-        "gain": "5",
+        "cropSaleValue": "45",
+        "farmSaleValue": "50",
+        "netValue": "5",
         "goldPerMinute": "0.08"
     },
     {
         "crop": "Star Spicy Pepper",
-        "cropYield": "48",
-        "farmYield": "50",
-        "gain": "2",
+        "cropSaleValue": "48",
+        "farmSaleValue": "50",
+        "netValue": "2",
         "goldPerMinute": "0.03"
     },
     {
         "crop": "Apple",
-        "cropYield": "64",
-        "farmYield": "65",
-        "gain": "1",
+        "cropSaleValue": "64",
+        "farmSaleValue": "65",
+        "netValue": "1",
         "goldPerMinute": "0.02"
     },
     {
         "crop": "Star Wheat",
-        "cropYield": "49",
-        "farmYield": "50",
-        "gain": "1",
+        "cropSaleValue": "49",
+        "farmSaleValue": "50",
+        "netValue": "1",
         "goldPerMinute": "0.02"
     },
     {
         "crop": "Star Blueberry",
-        "cropYield": "58",
-        "farmYield": "55",
-        "gain": "-3",
+        "cropSaleValue": "58",
+        "farmSaleValue": "55",
+        "netValue": "-3",
         "goldPerMinute": "-0.05"
     },
     {
         "crop": "Star Corn",
-        "cropYield": "60",
-        "farmYield": "55",
-        "gain": "-5",
+        "cropSaleValue": "60",
+        "farmSaleValue": "55",
+        "netValue": "-5",
         "goldPerMinute": "-0.08"
     },
     {
         "crop": "Star Potato",
-        "cropYield": "67",
-        "farmYield": "55",
-        "gain": "-12",
+        "cropSaleValue": "67",
+        "farmSaleValue": "55",
+        "netValue": "-12",
         "goldPerMinute": "-0.20"
     },
     {
         "crop": "Star Apple",
-        "cropYield": "96",
-        "farmYield": "65",
-        "gain": "-31",
+        "cropSaleValue": "96",
+        "farmSaleValue": "65",
+        "netValue": "-31",
         "goldPerMinute": "-0.52"
     },
     {
         "crop": "Cotton",
-        "cropYield": "45",
-        "farmYield": "-",
-        "gain": "-",
+        "cropSaleValue": "45",
+        "farmSaleValue": "-",
+        "netValue": "-",
         "goldPerMinute": "-"
     },
     {
         "crop": "Star Cotton",
-        "cropYield": "67",
-        "farmYield": "-",
-        "gain": "-",
+        "cropSaleValue": "67",
+        "farmSaleValue": "-",
+        "netValue": "-",
         "goldPerMinute": "-"
     }
 ]
