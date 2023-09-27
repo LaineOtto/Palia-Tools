@@ -1,3 +1,3 @@
 <script>
-	window.location.href = '/WormFarm';
+	window.location.href = '/about';
 </script>
