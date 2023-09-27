@@ -9,7 +9,15 @@
 	const data = readable(tableData);
 
 	const table = createTable(data, {
-		sort: addSortBy({}),
+		sort: addSortBy({
+			toggleOrder: ['asc', 'desc'],
+			initialSortKeys: [
+				{
+					id: 'goldPerMinute',
+					order: 'asc'
+				}
+			]
+		}),
 		colOrder: addColumnOrder()
 	});
 
