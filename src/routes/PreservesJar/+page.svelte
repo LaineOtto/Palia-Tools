@@ -67,12 +67,12 @@
 					{#each headerRow.cells as cell (cell.id)}
 						<Subscribe attrs={cell.attrs()} let:attrs props={cell.props()} let:props>
 							<th {...attrs} on:click={props.sort.toggle} class="leftAlign">
-								<Render of={cell.render()} />
 								{#if props.sort.order === 'asc'}
 									⬇️
 								{:else if props.sort.order === 'desc'}
 									⬆️
 								{/if}
+								<Render of={cell.render()} />
 							</th>
 						</Subscribe>
 					{/each}
@@ -96,17 +96,3 @@
 		{/each}
 	</tbody>
 </table>
-
-<style>
-	table {
-		border-spacing: 0;
-		border-top: 1px solid black;
-		border-left: 1px solid black;
-	}
-	th,
-	td {
-		border-bottom: 1px solid black;
-		border-right: 1px solid black;
-		padding: 0.5rem;
-	}
-</style>

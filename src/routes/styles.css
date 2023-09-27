@@ -2,15 +2,33 @@
 	font-family: monospace;
 }
 
+nav {
+	text-align: center;
+}
+
 nav li {
 	display: inline;
 	float: inline-start;
 	background-color: bisque;
 }
 
+table {
+	display: table;
+	margin: 0 auto;
+	border-spacing: 0;
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	/* border-right: 1px solid grey; */
+
+}
+
 th,
 td {
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	padding: 0.5rem;
 	text-align: right;
+	/* align text right bc most text is numbers, first-child below aligns left for crop names */
 }
 
 th:first-child,

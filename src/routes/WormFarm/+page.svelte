@@ -4,19 +4,12 @@
 	import { addSortBy, addColumnOrder } from 'svelte-headless-table/plugins';
 	import tableData from '$lib/data/wormFarm.js';
 
-	// console.log(tableData);
-
 	const data = readable(tableData);
 
 	const table = createTable(data, {
 		sort: addSortBy({
 			toggleOrder: ['asc', 'desc'],
-			initialSortKeys: [
-				{
-					id: 'goldPerMinute',
-					order: 'asc'
-				}
-			]
+			initialSortKeys: [{ id: 'goldPerMinute', order: 'asc' }]
 		}),
 		colOrder: addColumnOrder()
 	});
@@ -63,12 +56,12 @@
 					{#each headerRow.cells as cell (cell.id)}
 						<Subscribe attrs={cell.attrs()} let:attrs props={cell.props()} let:props>
 							<th {...attrs} on:click={props.sort.toggle}>
-								<Render of={cell.render()} />
 								{#if props.sort.order === 'asc'}
 									⬇️
 								{:else if props.sort.order === 'desc'}
 									⬆️
 								{/if}
+								<Render of={cell.render()} />
 							</th>
 						</Subscribe>
 					{/each}
@@ -92,17 +85,3 @@
 		{/each}
 	</tbody>
 </table>
-
-<style>
-	table {
-		border-spacing: 0;
-		border-top: 1px solid black;
-		border-left: 1px solid black;
-	}
-	th,
-	td {
-		border-bottom: 1px solid black;
-		border-right: 1px solid black;
-		padding: 0.5rem;
-	}
-</style>
