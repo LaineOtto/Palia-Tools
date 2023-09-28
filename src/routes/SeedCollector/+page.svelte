@@ -1,7 +1,7 @@
 <script>
 	import { readable } from 'svelte/store';
 	import { createTable, Subscribe, Render } from 'svelte-headless-table';
-	import { addSortBy, addColumnOrder } from 'svelte-headless-table/plugins';
+	import { addSortBy, addColumnOrder, addHiddenColumns } from 'svelte-headless-table/plugins';
 	import tableData from '$lib/data/seedCollectorNew.js';
 
 	const data = readable(tableData);
@@ -16,7 +16,10 @@
 				}
 			]
 		}),
-		colOrder: addColumnOrder()
+		colOrder: addColumnOrder(),
+		hide: addHiddenColumns({
+			initialHiddenColumnIds: ['seedSaleValue', 'cropInputNum', 'inputSaleValue', 'seedOutputNum']
+		})
 	});
 
 	const columns = table.createColumns([
