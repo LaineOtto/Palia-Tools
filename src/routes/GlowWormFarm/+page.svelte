@@ -1,10 +1,8 @@
 <script>
 	import { readable } from 'svelte/store';
 	import { createTable, Subscribe, Render } from 'svelte-headless-table';
-	import { addSortBy, addColumnOrder } from 'svelte-headless-table/plugins';
+	import { addSortBy, addColumnOrder, addHiddenColumns } from 'svelte-headless-table/plugins';
 	import tableData from '$lib/data/glowWormFarm.js';
-
-	// console.log(tableData);
 
 	const data = readable(tableData);
 
@@ -18,7 +16,10 @@
 				}
 			]
 		}),
-		colOrder: addColumnOrder()
+		colOrder: addColumnOrder(),
+		hideCols: addHiddenColumns({
+			initialHiddenColumnIds: []
+		})
 	});
 
 	const columns = table.createColumns([
@@ -47,7 +48,27 @@
 		})
 	]);
 
-	const { headerRows, rows, tableAttrs, tableBodyAttrs } = table.createViewModel(columns);
+	const { flatColumns, headerRows, rows, tableAttrs, tableBodyAttrs, pluginStates } =
+		table.createViewModel(columns);
+	const { hiddenColumnIds } = pluginStates.hideCols;
+
+	// creates a map of all column ids set to false(visible)
+	const ids = flatColumns.map((c) => c.id);
+	let hideForId = Object.fromEntries(ids.map((id) => [id, false]));
+
+	// sets the columns defined in initial state as true(hidden)
+	let hideId = $hiddenColumnIds.map((id) => [id, true]);
+	for (const id of hideId) {
+		// @ts-ignore
+		// this gives an error but works anyways so who knows
+		hideForId[id[0]] = true;
+	}
+
+	// Filters hideForId to only entries with a hide value and assigns the ids
+	// of those entries to hiddenColumnIds.
+	$: $hiddenColumnIds = Object.entries(hideForId)
+		.filter(([, hide]) => hide)
+		.map(([id]) => id);
 </script>
 
 <svelte:head>
@@ -92,3 +113,10 @@
 		{/each}
 	</tbody>
 </table>
+
+{#each ids as id}
+	<div>
+		<input id="hide-{id}" type="checkbox" bind:checked={hideForId[id]} />
+		<label for="hide-{id}">{id}</label>
+	</div>
+{/each}
