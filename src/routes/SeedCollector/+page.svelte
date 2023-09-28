@@ -2,9 +2,7 @@
 	import { readable } from 'svelte/store';
 	import { createTable, Subscribe, Render } from 'svelte-headless-table';
 	import { addSortBy, addColumnOrder } from 'svelte-headless-table/plugins';
-	import tableData from '$lib/data/seedCollector.js';
-
-	// console.log(tableData);
+	import tableData from '$lib/data/seedCollectorNew.js';
 
 	const data = readable(tableData);
 
@@ -39,16 +37,20 @@
 			accessor: 'cropInputNum'
 		}),
 		table.column({
+			header: 'Input Sale Value',
+			accessor: 'inputSaleValue'
+		}),
+		table.column({
 			header: 'Seed Output #',
 			accessor: 'seedOutputNum'
 		}),
 		table.column({
-			header: 'Sale Value per Input',
-			accessor: 'saleValuePerInput'
+			header: 'Total Seed Value',
+			accessor: 'totalSeedValue'
 		}),
 		table.column({
-			header: 'Net Value per Input',
-			accessor: 'netValuePerInput'
+			header: 'Net Value',
+			accessor: 'netValue'
 		}),
 		table.column({
 			header: 'Minutes',
